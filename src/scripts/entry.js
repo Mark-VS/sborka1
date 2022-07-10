@@ -1,4 +1,4 @@
-document.write("<p>Это \"entry.js\" - входной файл</p>");
+document.write("<p>Это \"entry.js\" - входной файл.</p>");
 
 var hello1 = require("./hello_node.js");
 hello1.helloNode();

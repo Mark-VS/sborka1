@@ -1,8 +1,8 @@
-const { src, dest } = require("gulp");
-const clean = require("gulp-clean");
-function cleanCss(cb) {
-    return src("./build/styles/**/*", {read: false})
-        .pipe(clean());
+const del = require("del");
+async function cleanCss(cb) {
+    await del([
+        "./build/styles/**/*"
+    ]);
     cb();
 }
 module.exports = cleanCss;
