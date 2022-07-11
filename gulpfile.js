@@ -25,16 +25,17 @@ module.exports.buildStyles = gulp.series(tasks.clean_css, tasks.styles);
 //module.exports.buildScripts = buildScripts;
 module.exports.buildScripts = gulp.series(tasks.clean_scripts, tasks.scripts);
 
-gulp.task("gusk", function() {
-    gulp.watch("./src/views/**/*.pug").on("change", tasks.views);
-    gulp.watch("./src/styles/**/*.scss").on("change", tasks.styles);
-    gulp.watch("./src/scripts/**/*.js").on("change", tasks.scripts);
-});
+function watcha() {
+    gulp.watch("./src/views/**/*.pug").on("change", gulp.series(tasks.views));
+    gulp.watch("./src/styles/**/*.scss").on("change", gulp.series(tasks.styles));
+    gulp.watch("./src/scripts/**/*.js").on("change", gulp.series(tasks.scripts));
+}
+module.exports.watcha = watcha;
 
 module.exports.build = gulp.series(
     gulp.series(tasks.clean_html, tasks.views),
     gulp.series(tasks.clean_css, tasks.styles),
     gulp.series(tasks.clean_scripts, tasks.scripts),
     tasks.serve,
-    "gusk"
+    watcha
 );
