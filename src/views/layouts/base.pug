@@ -1,0 +1,25 @@
+doctype html
+block variables
+html
+    head
+        title #{title}
+        link(
+            href = "styles/main.css"
+            rel = "stylesheet"
+        )
+    body
+
+        - var luba = 3
+        if luba == 5
+            p.ggg JOPa
+        else
+            p.ggg Совсем не жопа
+
+        p(class ={"ksks":luba==2}) asdfaf
+
+        block content
+        
+        script(
+            src = "scripts/main.js"
+            type = "text/javascript"
+        )

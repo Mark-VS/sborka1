@@ -1,16 +1,60 @@
-doctype html
-html
-    head
-        title Хреновина в заголовке
-        link(
-            href = "styles/main.css"
-            rel = "stylesheet"
-        )
-    body
-        p Это наша первая и пока единственная запись на страничке 233.
-        p Это наша вторая и уже не единственная запись на страничке.
-        p Третья строка. Ура.
-        script(
-            src = "scripts/main.js"
-            type = "text/javascript"
-        )
+extends layouts/base.pug
+block variables
+    - var title = "ООчень главная страница"
+
+block content
+    .content_block(style="border: solid 1px #000; width: 80%; margin: auto")
+        h2.title Это блок "content"
+        - var kakashka = "Это текст из переменной \"kakashka\"."
+        - var kakashka2 = "Это переменная Kakashka2";
+        - var classes = ["foo", "bar", "baz"]
+        p(class = classes class=["bong", "bang"]) Это наша первая и пока единственная запись на страничке 233.
+        p.zzz
+            | Это наша вторая и уже не единственная запись на страничке. Эту запись мы выводим после символа "|", на следующей строке.
+        p.
+            Третья строка. Ура. Мы её вывели после точки.
+            Продолжается третья строка.
+        p.gopnik_class В этой строке выводится текст из переменной "kakashka": #{kakashka}
+        p= kakashka2
+        ul
+            each value, index in ["zero", "one", "Два", "Три"]
+                li #{index}: #{value}
+        ul
+            each index, val in ["один", "два", "три"]
+                li= index + ": " + val
+            else
+                li= "Этот текст выведется только, если масси будет пустым."
+        p.roba= "Это пример обычного массива: "
+        - var n = 0;
+        ul
+            while n<4
+                li= "Строка №" + n++
+        // Эти комментарии останутся
+        //- А эти пропадут
+        p Вставка JavaScript кода:
+        ul
+            - for (var x=0; x<3; x++)
+                li item
+        p
+            = "This code is <escaped>!"
+
+        
+        - var user = {description: "foo bar baz"}
+        #user
+            if user.description
+                span.green Description:
+                span.description= user.description
+            else
+                span.green Description:
+                span.description= "There's no description"
+        p Миксины:
+        mixin article(title1)
+            .article(style="border: solid 1px pink; margin: 0 25px")
+                .article-wrapper
+                    h1= title1
+                    p.gogo Трататат. Текста статьи
+                    p.gogo Текст статьи продолжается
+        +article("Hello world mixins")
+        +article("Другая статья")
+        
+        
