@@ -1,12 +1,18 @@
 const { src, dest } = require("gulp");
-const imagemin = require("gulp-imagemin");
-// Я установил gulp-imagemin версии 7.1.0, потому что
-// новая, восьмая, версия не подключалась. Галп постоянно выдавал ошибки.
 const newer = require("gulp-newer");
-function convert_images() {
-    return src("./src/img/*")
+let imagemin;
+// imagemin 8-й версии подгружается в качестве ES-модуля
+//  Если мы хотим его загрузить из нашего CommonJS'а, то ...
+// ... надо это делать не через require, а динамически с помощью import'а.
+// Причём выполняться все операции должны асинхронно!
+async function loadImageminModule() {
+    imagemin = await import("gulp-imagemin");
+}
+async function convertImages() {
+    await loadImageminModule();
+    src("./src/img/*")
         .pipe(newer("./build/img"))
-        .pipe(imagemin())
+        .pipe(imagemin.default())
         .pipe(dest("./build/img"));
 }
-module.exports = convert_images;
+module.exports = convertImages;
