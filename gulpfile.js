@@ -1,9 +1,6 @@
 const gulp = require("gulp");
-//const imagemin = require("gulp-imagemin");
-
 const requiredir = require("requiredir");
 const tasks = requiredir("./tasks");
-
 
 // Пример подгрузки тасков без RequireDir
 const buka = require("./tasks/hello_world.js");
@@ -28,8 +25,6 @@ module.exports.buildStyles = gulp.series(tasks.clean_css, tasks.styles);
 //module.exports.buildScripts = buildScripts;
 module.exports.buildScripts = gulp.series(tasks.clean_scripts, tasks.scripts);
 module.exports.img = tasks.img;
-
-
 function watcha() {
     gulp.watch("./src/views/**/*.pug").on("change", gulp.series(tasks.views));
     gulp.watch("./src/styles/**/*.scss").on("change", gulp.series(tasks.styles));
@@ -37,7 +32,7 @@ function watcha() {
 }
 module.exports.watcha = watcha;
 
-module.exports.build = gulp.series(
+module.exports.default = gulp.series(
     gulp.series(tasks.clean_html, tasks.views),
     gulp.series(tasks.clean_css, tasks.styles),
     gulp.series(tasks.clean_scripts, tasks.scripts),
