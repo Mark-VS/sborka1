@@ -37,7 +37,7 @@ module.exports.default = gulp.series(
     gulp.series(tasks.clean_html, tasks.views),
     gulp.series(tasks.clean_css, tasks.styles),
     gulp.series(tasks.clean_scripts, tasks.scripts),
-    //tasks.img,
+    tasks.img,
     tasks.serve,
     watcha
 );

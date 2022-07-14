@@ -2,11 +2,10 @@ const { src, dest } = require("gulp");
 const gulp = require("gulp");
 const newer = require("gulp-newer");
 let imagemin;
-// imagemin 8-й версии подгружается в качестве ES-модуля
+// Imagemin 8-й версии подгружается в качестве ES-модуля.
 //  Если мы хотим его загрузить из нашего CommonJS'а, то ...
 // ... надо это делать не через require, а динамически с помощью import'а.
 // Причём выполняться все операции должны асинхронно!
-
 async function loadImageminModule() {
     imagemin = await import("gulp-imagemin");
 }
