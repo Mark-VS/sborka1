@@ -26,6 +26,13 @@ module.exports.buildStyles = gulp.series(tasks.clean_css, tasks.styles);
 module.exports.buildScripts = gulp.series(tasks.clean_scripts, tasks.scripts);
 module.exports.img = tasks.img;
 
+
+function cp_norm() {
+    gulp.src([normalize_path, "./src/styles/main.scss"])
+        .pipe(gulp.dest("./build"));
+}
+module.exports.cp_norm = cp_norm;
+
 function watcha() {
     gulp.watch("./src/views/**/*.pug").on("change", gulp.series(tasks.views));
     gulp.watch("./src/styles/**/*.scss").on("change", gulp.series(tasks.styles));
