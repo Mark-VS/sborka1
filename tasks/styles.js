@@ -4,20 +4,25 @@ const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const srmaps = require("gulp-sourcemaps");
-const normalize_path = "./node_modules/normalize.css/normalize.css"
-
+const newer = require("gulp-newer");
+// Копируем nozrmalize.css в директорию
+// Эта ф-ция вынесена отдельно для того, чтобы каждый раз ...
+// ... не пересобирать normalize.css заново. За этим следит плагин gulp-newer.
 function norm() {
+    var processors = [cssnano()];
     return gulp.src("./node_modules/normalize.css/normalize.css")
-        .pipe(cssnano())
-        .pipe(gulp.dest("./build"));
+        .pipe(newer("./build/styles"))
+        .pipe(postCss(processors))
+        .pipe(gulp.dest("./build/styles"));
 }
+// Собираем стили
 function compileStyles() {
     var plugins = [
         autoprefixer({overrideBrowserslist: ["last 1 version"]}),
         cssnano()
     ];
-    //norm();
-    return gulp.src([normalize_path, "./src/styles/main.scss"])
+    norm();
+    return gulp.src("./src/styles/main.scss")
         .pipe(srmaps.init())
             .pipe(sass().on("error", sass.logError))
             .pipe(postCss(plugins))
@@ -25,7 +30,3 @@ function compileStyles() {
         .pipe(gulp.dest("./build/styles"));
 }
 module.exports = compileStyles;
-function norm() {
-    return gulp.src("./node_modules/normalize.css/normalize.css")
-        .pipe(gulp.dest("./build"));
-}
