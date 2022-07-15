@@ -1,8 +1,8 @@
 function hello() {
-    document.write("<p class='hello2'>Это модуль Hello Wolrd 2 из EcmaScript.</p>");
+    return "Это текст из ES-модуля - текст, который возвращает функция \"hello\"";
 }
 function defHello() {
-    document.write("<p class='hello3'>Это модуль Hello World 2 с экспортом по дефолту.</p>");
+    return "Это текст из дефолтной функции ES-модуля.";
 }
 export { hello };
 export default defHello;
