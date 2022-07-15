@@ -1,0 +1,12 @@
+// Стиль для вывода тестовых js-строк из pug-файла
+.js-pug {
+    border: solid 1px blue;
+    &__title {
+        margin: 0
+    }
+    &__string {
+        color: green;
+        margin: 0;
+        padding: 0
+    }
+}

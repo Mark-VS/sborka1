@@ -1,0 +1,18 @@
+.jquery-block {
+    border: solid 1px green;
+    &__title {
+        margin: 0
+    }
+    &__desc {
+        margin: 0;
+        color: grey
+    }
+    &__list {
+        margin: 0;
+        padding: 0 0 0 20px
+    }
+    &__string {
+        color: violet;
+        margin: 0
+    }
+}

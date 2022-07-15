@@ -3,8 +3,12 @@ block variables
     - var title = "ООчень главная страница"
 
 block durashka
-    h2 Это блок durashka
-
+    .wrapper
+        .js-pug
+            h2.js-pug__title Это блок durashka
+            script(language="javascript")
+                | document.write("<p class='js-pug__string'>Это строка, которую мы вызвали из скрипта в pug-файле.</p>");
+                | document.write("<p class='js-pug__string'>Это вторая скриптовая строка из index.pug-файла.</p>");
 block content
     .content_block(style="border: solid 1px #000; width: 80%; margin: auto")
         h2.title Это блок "content"

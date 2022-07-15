@@ -1,5 +1,7 @@
 document.write("<p>Это \"entry.js\" - входной файл.</p>");
 
+import $ from "jquery";
+
 var hello1 = require("./hello_node.js");
 hello1.helloNode();
 
@@ -8,3 +10,6 @@ helloEcma();
 
 import helloEcma2 from "./hello_ecma";
 helloEcma2();
+
+import jqueryDemo from "./jqueryDemoModule";
+jqueryDemo();
