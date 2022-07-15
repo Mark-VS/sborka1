@@ -7,3 +7,14 @@
 p {
     color: grey; // This is fucking govno
 }
+.content-block {
+    margin: 0 0 0 32px;
+    padding: 0 10px;
+    border-left: solid 1px grey;
+    &__title {
+        margin: 0
+    }
+    &__line {
+        margin: 0
+    }
+}

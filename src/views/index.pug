@@ -11,19 +11,18 @@ block durashka
                 | document.write("<p class='js-pug__string'>Это вторая скриптовая строка из index.pug-файла.</p>");
 block content
     .wrapper
-        .content_block
-            h2.title Это блок "content"
+        .content-block
+            h2.content-block__title Это блок "content"
             - var kakashka = "Это текст из переменной \"kakashka\"."
             - var kakashka2 = "Это переменная Kakashka2";
-            - var classes = ["foo", "bar", "baz"]
-            p(class = classes class=["bong", "bang"]) Это наша первая и пока единственная запись на страничке 233.
-            p.zzz
+            p.content-block__line Это наша первая и пока единственная запись на страничке 233.
+            p.content-block__line
                 | Это наша вторая и уже не единственная запись на страничке. Эту запись мы выводим после символа "|", на следующей строке.
-            p.
+            p.content-block__line.
                 Третья строка. Ура. Мы её вывели после точки.
                 Продолжается третья строка.
-            p.gopnik_class В этой строке выводится текст из переменной "kakashka": #{kakashka}
-            p= kakashka2
+            p.content-block__line В этой строке выводится текст из переменной "kakashka": #{kakashka}
+            p.content-block__line= kakashka2
             ul
                 each value, index in ["zero", "one", "Два", "Три"]
                     li #{index}: #{value}
