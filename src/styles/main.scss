@@ -1,8 +1,10 @@
 @import "js-pug";
 @import "js-load-modules";
 @import "jquery-demo-module";
+@import "popcorn-block";
 .wrapper {
-    margin: 0 100px
+    width: 84%;
+    margin: 0 auto;
 }
 p {
     color: grey; // This is fucking govno
@@ -10,7 +12,6 @@ p {
 .content-block {
     margin: 0 0 0 32px;
     padding: 0 10px;
-    border-left: solid 1px grey;
     &__title {
         margin: 0
     }

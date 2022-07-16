@@ -9,6 +9,7 @@ block durashka
             script(language="javascript")
                 | document.write("<p class='js-pug__string'>Это строка, которую мы вызвали из скрипта в pug-файле.</p>");
                 | document.write("<p class='js-pug__string'>Это вторая скриптовая строка из index.pug-файла.</p>");
+
 block content
     .wrapper
         .content-block
@@ -63,5 +64,15 @@ block content
                         p.gogo Текст статьи продолжается
             +article("Hello world mixins")
             +article("Другая статья")
-        
-        
+block popik
+    .wrapper
+        .popcorn-block
+            h3.popcorn-block__title Блок @popperjs/core
+            p.popcorn-block__line В этом блоке мы проверяем работоспособность подключённого модуля @popperjs/core.
+            p.popcorn-block__line Если "My tooltip" отображается справа от попкорна, то всё в порядке.
+            p.popcorn-block__line.popcorn-block__error
+            p.popcorn-block__line.popcorn-block__error
+            div(id="popcorn" aria-describedby="tooltip")
+            div(id="tooltip" role="tooltip")
+                | My tooltip
+                div(id="arrow" data-popper-arrow)

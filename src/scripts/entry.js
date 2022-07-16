@@ -18,3 +18,11 @@ document.write("</div>");
 // Он выводит в html-документ окно с 6-ю строками и через jQuery изменяет их цвета.
 import jqueryDemo from "./jqueryDemoModule";
 jqueryDemo();
+
+// Модуль, который подключает @popperjs/core
+import PopperDemo from "./popperDemoModule";
+try {
+    PopperDemo();
+} catch(err) {
+    err.elemErrorMessage.innerHTML = err.message;
+}
