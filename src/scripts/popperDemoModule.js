@@ -1,14 +1,20 @@
-import { createPopper } from "@popperjs/core";
+import { createPopper2 } from "@popperjs/core";
 // Исключение
 function PopperException(mess) {
-    // Указываем HTML-элемент, куда будет выводиться наше сообщение об ошибке
-    this.elemErrorTitle = document.getElementsByClassName("popcorn-block__error")[0];
-    this.elemErrorMessage = document.getElementsByClassName("popcorn-block__error")[1];
-    this.elemErrorTitle.style.color = "red";
-    this.elemErrorMessage.style.color = "red";
-    this.message = mess;
     this.name = "Это исключение, сгенерированное в модуле \"popperDemoModule.js\".";
-    this.elemErrorTitle.innerHTML = this.name;
+    this.message = mess;
+    // Мы находим в HTML-документе последний элемент с классом "popcorn-block__line" ...
+    // ... и добавляем посленего ещё два элемента: popcorn-block__error-title и popcorn-block__error-message
+    let elemList = document.getElementsByClassName("popcorn-block__line");
+    let lastElemNumber = elemList.length-1;
+    let elemLastLine = elemList[lastElemNumber];
+    elemLastLine.insertAdjacentHTML("afterend", "<p class='popcorn-block__line popcorn-block__error-title'>"+this.name+"</p>");
+    let elemErrorTitle = document.getElementsByClassName("popcorn-block__error-title")[0];
+    elemErrorTitle.insertAdjacentHTML("afterend", "<p class='popcorn-block__line popcorn-block__error-message'>"+this.message+"</p>");
+    let elemErrorMessage = document.getElementsByClassName("popcorn-block__error-message")[0];
+    // Делаем их красными
+    elemErrorTitle.style.color = "red";
+    elemErrorMessage.style.color = "red";
 }
 // Создаём Popper
 function PopperDemoClass() {

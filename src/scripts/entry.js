@@ -24,5 +24,11 @@ import PopperDemo from "./popperDemoModule";
 try {
     PopperDemo();
 } catch(err) {
-    err.elemErrorMessage.innerHTML = err.message;
+    alert(err.message);
 }
+//let elemList = document.getElementsByClassName("popcorn-block__line");
+//let lastElemNumber = elemList.length-1;
+//let pupa = elemList[lastElemNumber];
+//let lastEl = document.getElementsByClassName("popcorn-block__line").length-1;
+//let pupa = document.getElementsByClassName("popcorn-block__line")[lastEl];
+//pupa.insertAdjacentHTML("afterend", "<div>КАКАШЕЧКА</div>");
