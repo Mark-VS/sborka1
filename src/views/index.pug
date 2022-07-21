@@ -9,6 +9,8 @@ block durashka
             script(language="javascript")
                 | document.write("<p class='js-pug__string'>Это строка, которую мы вызвали из скрипта в pug-файле.</p>");
                 | document.write("<p class='js-pug__string'>Это вторая скриптовая строка из index.pug-файла.</p>");
+        p Какашка-букашка
+        .alert.alert-primary(role="alert") A simple primary alert-check it out!
 
 block content
     .wrapper
@@ -75,3 +77,11 @@ block popik
             div(id="tooltip" role="tooltip")
                 | My tooltip
                 div(id="arrow" data-popper-arrow)
+block grid
+    .wrapper
+        .container
+            .row
+                .col-sm Первая из трёх
+                .col-md Вторая из трёх
+                .col-sm Третья из трёх
+                .col-sm Четв
