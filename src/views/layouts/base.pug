@@ -1,6 +1,6 @@
 doctype html
 block variables
-html
+html(lang="ru")
     head
         title #{title}
         meta(charset = "utf-8")
@@ -21,7 +21,7 @@ html
         block content
         block popik
         block grid
-        
+        include footer.pug
         
         script(
             src = "scripts/main.js"

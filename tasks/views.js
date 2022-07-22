@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 
 function views(cb) {
-    return gulp.src("./src/views/index.pug")
+    return gulp.src("./src/views/*.pug")
         .pipe(pug({
             pretty: true
         }))
