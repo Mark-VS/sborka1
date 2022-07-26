@@ -22,7 +22,7 @@ function compileStyles() {
         cssnano()
     ];
     norm();
-    return gulp.src("./src/styles/main.scss")
+    return gulp.src(["./src/styles/main.scss"])
         .pipe(srmaps.init())
             .pipe(sass().on("error", sass.logError))
             .pipe(postCss(plugins))

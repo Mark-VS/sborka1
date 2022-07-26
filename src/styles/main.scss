@@ -29,13 +29,15 @@ $prefix: "mo-";
 @import "js-load-modules";
 @import "jquery-demo-module";
 @import "popcorn-block";
+@import "bp-no-bootstrap";      // изучаем медиа-запросы и breakpoint'ы без bootstrap'а
+@import "bp-bootstrap";         // изучаем медиа-запросы и breakpoint'ы с bootstrap'ом
 .wrapper {
     width: 84%;
     margin: 0 auto;
 }
-p {
-    color: grey; // This is fucking govno
-}
+
+
+
 .content-block {
     margin: 0 0 0 32px;
     padding: 0 10px;

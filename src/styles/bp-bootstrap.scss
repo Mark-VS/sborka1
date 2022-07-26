@@ -1,0 +1,30 @@
+.code-line {
+    margin: 0;
+    &__tab {
+        margin-left: 36px
+    }
+}
+
+// media-breakpoint-up - это то же, что и min-width
+.bs-bp-example {
+    color: blue;
+}
+.bs-bp-example:after {
+    content: " Текст по умолчанию.";
+}
+@include media-breakpoint-up(md) {
+    .bs-bp-example {
+        color: green;
+        &:after {
+            content: " Первый breakpoint пройден."
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .bs-bp-example {
+        color: red;
+        &:after {
+            content: " Второй breakpoint пройден.";
+        }
+    }
+}

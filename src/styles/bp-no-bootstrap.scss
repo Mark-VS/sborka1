@@ -1,0 +1,83 @@
+$bp1: 800px;    // Первый Breakpoint
+$bp2: 1200px;   // Второй Breakpoint
+$bp3: 1500px;   // Третий Breakpoint
+
+// min-width
+.line {
+    &__example {
+        color: blue;
+    }
+    &__example:after {
+        content: " Это текст по умолчанию.";
+    }
+}
+@media screen and (min-width: $bp1) {
+    .line {
+        &__example {
+            color: green;
+        }
+        &__example:after {
+            content: " Пройден первый breakpoint в " + $bp1 + ".";
+        }
+    }
+}
+@media screen and (min-width: $bp2) {
+    .line {
+        &__example {
+            color: red;
+        }
+        &__example:after {
+            content: " Пройден второй breakpoint в " + $bp2 + ".";
+        }
+    }
+}
+@media screen and (min-width: $bp3) {
+    .line {
+        &__example {
+            color: purple
+        }
+        &__example:after {
+            content: " Пройден третий breakpoint в " + $bp3 + ".";
+        }
+    }
+}
+
+// max-width
+.line {
+    &__example2 {
+        color: blue;
+    }
+    &__example2:after {
+        content: " Это текст по умолчанию.";
+    }
+}
+@media screen and (max-width: $bp3) {
+    .line {
+        &__example2 {
+            color: green;
+        }
+        &__example2:after {
+            content: " Пройден первый breakpoint в " + $bp3 + ".";
+        }
+    }
+}
+@media screen and (max-width: $bp2) {
+    .line {
+        &__example2 {
+            color: red;
+        }
+        &__example2:after {
+            content: " Пройден второй breakpoint в " + $bp2 + ".";
+        }
+    }
+}
+@media screen and (max-width: $bp1) {
+    .line {
+        &__example2 {
+            color: purple;
+        }
+        &__example2:after {
+            content: " Пройден третий breakpoint в " + $bp1 + ".";
+        }
+    }
+}
