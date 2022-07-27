@@ -1,8 +1,16 @@
+$kaka: (kaka1: 1, kaka2: 2);
+$daka: "ГОВНО";
+
 .code-line {
     margin: 0;
     &__tab {
         margin-left: 36px
     }
+}
+
+.bs-bp-mono {
+    font-family: monospace;
+    color: black;
 }
 
 // media-breakpoint-up - это то же, что и min-width
@@ -28,3 +36,44 @@
         }
     }
 }
+@include media-breakpoint-up(xxl) {
+    .bs-bp-example {
+        color: purple;
+        &:after {
+            content: " Третий breakpoint пройден.";
+        }
+    }
+}
+
+// media-breakpoint-down - то же, что и max-width
+.bs-bp-example2 {
+    color: blue;
+    &:after {
+        content: " Это текст по умолчанию.";
+    }
+}
+@include media-breakpoint-down(xxl) {
+    .bs-bp-example2 {
+        color: green;
+        &:after {
+            content: " Первый breakpoint в " + map-get($grid-breakpoints, "xxl") + " пройден.";
+        }
+    }
+}
+@include media-breakpoint-down(xl) {
+    .bs-bp-example2 {
+        color: red;
+        &:after {
+            content: " Второй breakpoint в "+ map-get($grid-breakpoints, "xl") + " пройден.";
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .bs-bp-example2 {
+        color: purple;
+        &:after {
+            content: " Третий breakpoint в " + map-get($grid-breakpoints, "md") + " пройден.";
+        }
+    }
+}
+@debug map-get($kaka, "kaka1");
