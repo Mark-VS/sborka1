@@ -1,3 +1,4 @@
+
 // Functions first
 @import "./../../node_modules/bootstrap/scss/functions";
 
@@ -25,6 +26,7 @@ $prefix: "mo-";
 @import "./../../node_modules/bootstrap/scss/bootstrap.scss";
 
 
+@import "custom-variables";            // переопределяем дефолтные переменные
 @import "js-pug";
 @import "js-load-modules";
 @import "jquery-demo-module";
@@ -49,6 +51,8 @@ $prefix: "mo-";
     }
 }
 
+
 .row div {
     border: solid 1px green
 }
+

@@ -19,6 +19,17 @@ html(lang="ru")
                     p.code-line.code-line__tab xl: 1200px,
                     p.code-line.code-line__tab xxl: 1400px
                     p.code-line );
+            p Тут мы переопределили контрольные точки
+                code.code-container
+                    p.code-line $grid-breakpoints: (
+                    // Далее у нас идут пустые эл-ты, чтобы через css добавить в них значения
+                    p.code-line.code-line__tab.code-line__tab-xs ,
+                    p.code-line.code-line__tab.code-line__tab-sm ,
+                    p.code-line.code-line__tab.code-line__tab-md ,
+                    p.code-line.code-line__tab.code-line__tab-lg ,
+                    p.code-line.code-line__tab.code-line__tab-xl ,
+                    p.code-line.code-line__tab.code-line__tab-xxl
+                    p.code-line );
             h4.bs-bp-title Миксин 
                 span.bs-bp-mono "media-breakpoint-up"
             p.bs-bp-line То же самое, что и свойство 
