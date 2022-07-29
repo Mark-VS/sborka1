@@ -22,3 +22,5 @@ jqueryDemo();
 // Модуль, который подключает @popperjs/core
 import PopperDemo from "./popperDemoModule";
 PopperDemo();
+
+import Collapse from "./../../node_modules/bootstrap/js/dist/collapse";

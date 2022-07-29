@@ -7,25 +7,69 @@ html(lang="ru")
         link(href="styles/main.css", rel="stylesheet")
         title bs-components
     body
+        script(src="scripts/main.js" type="text/javascript")
         p Это bs-components
         .wrapper
-            h3.bs-components-title Alert
-            .alert.alert-primary(role="alert") Пример компонента alert-primary
-            .alert.alert-secondary(role="alert") Пример компонента alert-secondary
+            .example-alert
+                h3.bs-components-title Alert
+                .alert.alert-primary(role="alert") Пример компонента alert-primary
+                .alert.alert-secondary(role="alert") Пример компонента alert-secondary
+            .example-badge
             h3.bs-components-title Badge
-            h3 Пример заголовка
-                span.badge.bg-secondary Badge
-            h4 Пример заголовка поменьше
-                span.badge.bg-secondary Badge
-            p Простая строка
-                span.badge.bg-secondary Badge
-            h3.bs-components-title Breadcrumb
-            nav(aria-label="breadcrumb")
-                ol.breadcrumb
-                    li.breadcrumb-item Главная
-                    li.breadcrumb-item Библиотека
-                    li.breadcrumb-item.active(aria-current="page") Данные
-            h3.bs-components-title Buttons
-            button.btn.btn-primary(type="button") Primary
-            button.btn.btn-success(type="button") Success
-            button.btn.btn-warning(type="button") Warning
+                h3 Пример заголовка
+                    span.badge.bg-secondary Badge
+                h4 Пример заголовка поменьше
+                    span.badge.bg-secondary Badge
+                p Простая строка
+                    span.badge.bg-secondary Badge
+            .example-breadcrumb
+                h3.bs-components-title Breadcrumb
+                nav(aria-label="breadcrumb")
+                    ol.breadcrumb
+                        li.breadcrumb-item Главная
+                        li.breadcrumb-item Библиотека
+                        li.breadcrumb-item.active(aria-current="page") Данные
+            .example-buttons
+                h3.bs-components-title Buttons
+                button.btn.btn-primary(type="button") Primary
+                button.btn.btn-success(type="button") Success
+                button.btn.btn-warning(type="button") Warning
+            .example-button-group
+                h3.bs-components-title Button Group
+                .btn-group(role="group" aria-label="Basic example")
+                    button.btn.btn-danger(type="button") Первая
+                    button.btn.btn-danger(type="button") Вторая
+                    button.btn.btn-danger(type="button") Третья
+            .example-card
+                h3.bs-components-title Card
+                .container-fluid
+                    .row
+                        .col
+                            .card(style="width: 18rem")
+                                img.card-img-top(src="img/nine.jpg" alt="Nine")
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    a.btn.btn-primary(href="#") Кнопка
+                        .col
+                            .card(style="width: 18rem")
+                                img.card-img-top(src="img/ice.jpg" alt="Ice")
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    a.btn.btn-primary(href="#") Кнопка
+            .example-close-button
+                h3.bs-components-title Close button
+                button.btn-close.btn-close-dark(type="button" aria-label="Close")
+                button.btn-close.btn-close-dark(type="button" aria-label="Close" disabled)
+            
+            .example-collapse
+                h3.bs-components-title Collapse
+                p Необходим импорт _transitions.scss и collapse.js
+                p
+                    a.btn.btn-primary(data-bs-toggle="collapse" href="#collapseExample" role="button" aria-control="collapseExample") Link with href
+                    button.btn.btn-primary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample") Button with data-bs-target
+                .collapse(id="collapseExample")
+                    .card.card-body Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+   
+                        
