@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(href="styles/normalize.css", rel="stylesheet")
+        link(href="styles/main.css", rel="stylesheet")
+        title bs-components
+    body
+        p Это bs-components
+        .wrapper
+            h3.bs-components-title Alert
+            .alert.alert-primary(role="alert") Пример компонента alert-primary
+            .alert.alert-secondary(role="alert") Пример компонента alert-secondary
+            h3.bs-components-title Badge
+            h3 Пример заголовка
+                span.badge.bg-secondary Badge
+            h4 Пример заголовка поменьше
+                span.badge.bg-secondary Badge
+            p Простая строка
+                span.badge.bg-secondary Badge
+            h3.bs-components-title Breadcrumb
+            nav(aria-label="breadcrumb")
+                ol.breadcrumb
+                    li.breadcrumb-item Главная
+                    li.breadcrumb-item Библиотека
+                    li.breadcrumb-item.active(aria-current="page") Данные
+            h3.bs-components-title Buttons
+            button.btn.btn-primary(type="button") Primary
+            button.btn.btn-success(type="button") Success
+            button.btn.btn-warning(type="button") Warning

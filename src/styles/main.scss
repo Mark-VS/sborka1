@@ -23,7 +23,11 @@ $prefix: "mo-";
 
 // Cutoms
 @import "./../../node_modules/bootstrap/scss/alert";
-@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./../../node_modules/bootstrap/scss/badge";
+@import "./../../node_modules/bootstrap/scss/breadcrumb";
+@import "./../../node_modules/bootstrap/scss/buttons";
+
+//@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
 
 
 @import "custom-variables";            // переопределяем дефолтные переменные
@@ -56,3 +60,6 @@ $prefix: "mo-";
     border: solid 1px green
 }
 
+.bs-components-title {
+    text-decoration: underline
+}
