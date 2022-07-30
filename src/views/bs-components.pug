@@ -7,7 +7,6 @@ html(lang="ru")
         link(href="styles/main.css", rel="stylesheet")
         title bs-components
     body
-        script(src="scripts/main.js" type="text/javascript")
         p Это bs-components
         .wrapper
             .example-alert
@@ -62,6 +61,7 @@ html(lang="ru")
                 h3.bs-components-title Close button
                 button.btn-close.btn-close-dark(type="button" aria-label="Close")
                 button.btn-close.btn-close-dark(type="button" aria-label="Close" disabled)
+                p Тут необходимо разобраться, как менять стили и цвета, потому что ничего, кроме "white" и "dark", не работает.
             
             .example-collapse
                 h3.bs-components-title Collapse
@@ -71,5 +71,37 @@ html(lang="ru")
                     button.btn.btn-primary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample") Button with data-bs-target
                 .collapse(id="collapseExample")
                     .card.card-body Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-   
+            .example-dropdowns
+                h3.bs-components-title Dropdowns
+                .container-fluid
+                    .row
+                        .col
+                            .dropdown
+                                button.btn.btn-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Кнопка Dropdown
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(href="#") Action
+                                    li
+                                        a.dropdown-item(href="#") Another action
+                                    li
+                                        a.dropdown-item(href="#") Something else here
+                        .col
+                            .dropdown
+                                a.btn.btn-secondary.btn-lg.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Ссылка Dropdown
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(href="#") Первый пункт
+                                    li
+                                        a.dropdown-item(href="#") Второй пункт
+                                    li
+                                        a.dropdown-item(href="#") Третий пункт
+                p Здесь ещё можно поразбираться с размерами кнопок - как можно добавить кастомные размеры.
+            .exmaple-smth
+                h3.bs-components-title Something else
+                p А это строка, которая идёт после заголовка. Тра-та-та.
+                p Добавим ещё одну строку.
+                P И ещё одну - чтобы заполнить больше пространства.
+        
+        // Подключаем скрипты
+        script(src="scripts/bs-components-entry.js" type="text/javascript")
                         
