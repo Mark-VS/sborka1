@@ -42,8 +42,11 @@ body {
 @import "./../../node_modules/bootstrap/scss/dropdown";
 @import "./../../node_modules/bootstrap/scss/list-group";
 @import "./../../node_modules/bootstrap/scss/modal";
+@import "./../../node_modules/bootstrap/scss/nav";
+@import "./../../node_modules/bootstrap/scss/navbar";
+@import "./../../node_modules/bootstrap/scss/pagination";
 
-@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+//@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
 
 
 @import "custom-variables";            // переопределяем дефолтные переменные

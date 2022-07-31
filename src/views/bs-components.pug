@@ -124,11 +124,104 @@ html(lang="ru")
                             .modal-footer
                                 button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Закрыть
                                 button.btn.btn-primary(type="button") Сохранить изменения
+                
+            .example-navs
+                h3.bs-components-title Navs & tabs 
+                ul.nav.justify-content-start
+                    li.nav-item
+                        a.nav-link.active(aria-current="page" href="#") Acitve
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link.disabled Disabled link
+                nav.nav
+                    a.nav-link.active(aria-current="page" href="#") Active 
+                    a.nav-link(href="#") Link
+                    a.nav-link(href="#") Link
+                    a.nav-link.disabled Disabled link
 
+                ul.nav.nav-tabs
+                    li.nav-item
+                        a.nav-link.active(aria-current="page" href="#") Active
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link.disabled Disabled
+                ul.nav.nav-pills
+                    li.nav-item
+                        a.nav-link.active(aria-current="page" href="#") Active
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link(href="#") Link
+                    li.nav-item
+                        a.nav-link.disabled Disabled
+            .example-navbar
+                h3.bs-components-title Navbar
+                p Если скопировать этот первый пример с оф. сайта Bootstrap'а, то иконка навбара не будет отображаться, когда мы уменьшим окно. Это из-за того, что у тэга NAV пропущен класс .navbar-light
 
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                    .container-fluid
+                        a.navbar-brand(href="#") Navbar
+                        button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                            span.navbar-toggler-icon
+                        .collapse.navbar-collapse(id="navbarSupportedContent")
+                            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                                li.nav-item
+                                    a.nav-link.active(aria-current="page" href="#") Home
+                                li.nav-item
+                                    a.nav-link(href="#") Link
+                                li.nav-item.dropdown
+                                    a.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Dropdown
+                                    ul.dropdown-menu
+                                        li
+                                            a.dropdown-item(href="#") Action
+                                        li
+                                            a.dropdown-item(href="#") Another action
+                                        li
+                                            hr.dropdown-divider
+                                        li
+                                            a.dropdown-item(href="#") Something else here
+                                li.nav-item
+                                    a.nav-link.disabled Disabled
+                            form.d-flex(role="search")
+                                input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-outline-success(type="submit") Search
 
+            .example-pagination
+                h3.bs-components-title Pagination
 
-
+                nav(aria-label="Page navigation example")
+                    ul.pagination
+                        li.page-item
+                            a.page-link(href="#") Previous
+                        li.page-item
+                            a.page-link(href="#") 1
+                        li.page-item
+                            a.page-link(href="#") 2
+                        li.page-item
+                            a.page-link(href="#") 3
+                        li.page-item
+                            a.page-link(href="#") Next
+                p working with icons
+                nav(aria-label="Page navigation example")
+                    ul.pagination
+                        li.page-item.disabled
+                            a.page-link(href="#" aria-label="Previous")
+                                span(aria-hidden="true") &laquo;
+                        li.page-item 
+                            a.page-link(href="#") 1
+                        li.page-item
+                            a.page-link(href="#") 2
+                        li.page-item
+                            a.page-link(href="#") 3
+                        li.page-item
+                            a.page-link(href="#" aria-label="Next")
+                                span(aria-hidden="true") &raquo;
             .exmaple-smth
                 h3.bs-components-title Something else
                 p А это строка, которая идёт после заголовка. Тра-та-та.
