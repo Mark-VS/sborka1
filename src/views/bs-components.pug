@@ -64,7 +64,7 @@ html(lang="ru")
                 p Тут необходимо разобраться, как менять стили и цвета, потому что ничего, кроме "white" и "dark", не работает.
             
             .example-collapse
-                h3.bs-components-title Collapse
+                h3.bs-components-title !! Collapse
                 p Необходим импорт _transitions.scss и collapse.js
                 p
                     a.btn.btn-primary(data-bs-toggle="collapse" href="#collapseExample" role="button" aria-control="collapseExample") Link with href
@@ -72,7 +72,7 @@ html(lang="ru")
                 .collapse(id="collapseExample")
                     .card.card-body Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
             .example-dropdowns
-                h3.bs-components-title Dropdowns
+                h3.bs-components-title !! Dropdowns
                 .container-fluid
                     .row
                         .col
@@ -96,11 +96,46 @@ html(lang="ru")
                                     li
                                         a.dropdown-item(href="#") Третий пункт
                 p Здесь ещё можно поразбираться с размерами кнопок - как можно добавить кастомные размеры.
+            .example-list-group
+                h3.bs-components-title List group
+                ul.list-group
+                    li.list-group-item.active Первый пункт
+                    li.list-group-item.list-group-item-action Второй пункт
+                    li.list-group-item.list-group-item-action Третий пункт
+                    li.list-group-item.disabled Четвёртый пункт
+                    li.list-group-item Пятый пункт
+                    li.list-group-item.list-group-item-success Шестой пункт
+                    li.list-group-item Седьмой пункт
+            .example-modal
+                h3.bs-components-title !! Modal
+                p  Статическое окно
+                // Кнопка, которая запускает модальное окно:
+                button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") Запустить демо модального окна
+                // Само модальное окно
+                .modal.fade(id="exampleModal" tabindex="-1" aria-labeledby="exampleModalLabel" aria-hidden="true")
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h5.modal-title(id="exampleModalLabel") Заголовок модального окна
+                                button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Закрыть")
+                            .modal-body
+                                p Здесь у нас может быть любой текст.
+                                p И ещё какой-нибудь текст
+                            .modal-footer
+                                button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Закрыть
+                                button.btn.btn-primary(type="button") Сохранить изменения
+
+
+
+
+
             .exmaple-smth
                 h3.bs-components-title Something else
                 p А это строка, которая идёт после заголовка. Тра-та-та.
                 p Добавим ещё одну строку.
                 P И ещё одну - чтобы заполнить больше пространства.
+
+            
         
         // Подключаем скрипты
         script(src="scripts/bs-components-entry.js" type="text/javascript")
