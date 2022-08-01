@@ -222,6 +222,31 @@ html(lang="ru")
                         li.page-item
                             a.page-link(href="#" aria-label="Next")
                                 span(aria-hidden="true") &raquo;
+            .example-placeholders
+                h3.bs-components-title Placeholders
+                .container-fluid
+                    .row
+                        .col-6
+                            .card(style="width: 18rem")
+                                img.card-img-top(src="img/mask.jpg" alt="...")
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    a.btn.btn-primary(href="#") Go somewhere
+                        .col-6
+                            .card(aria-hidden="true" style="width: 18rem")
+                                img.card-img-top(src="img/mask.jpg" alt="...")
+                                .card-body
+                                    h5.card-title.placeholder-glow
+                                        span.placeholder.col-6
+                                    p.card-text.placeholder-glow
+                                        span.placeholder.col-7
+                                        span.placeholder.col-4
+                                        span.placeholder.col-4 
+                                        span.placeholder.col-6
+                                        span.placeholder.col-8
+                                    a.btn.btn-primary.disabled.placeholder.col-6(href="#" tabindex="-1")
+
             .exmaple-smth
                 h3.bs-components-title Something else
                 p А это строка, которая идёт после заголовка. Тра-та-та.
