@@ -3,8 +3,8 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        link(href="styles/normalize.css", rel="stylesheet")
-        link(href="styles/main.css", rel="stylesheet")
+        link(href="styles/normalize.css" rel="stylesheet")
+        link(href="styles/main.css" rel="stylesheet")
         title bs-components
     body
         p Это bs-components
@@ -63,38 +63,7 @@ html(lang="ru")
                 button.btn-close.btn-close-dark(type="button" aria-label="Close" disabled)
                 p Тут необходимо разобраться, как менять стили и цвета, потому что ничего, кроме "white" и "dark", не работает.
             
-            .example-collapse
-                h3.bs-components-title !! Collapse
-                p Необходим импорт _transitions.scss и collapse.js
-                p
-                    a.btn.btn-primary(data-bs-toggle="collapse" href="#collapseExample" role="button" aria-control="collapseExample") Link with href
-                    button.btn.btn-primary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample") Button with data-bs-target
-                .collapse(id="collapseExample")
-                    .card.card-body Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            .example-dropdowns
-                h3.bs-components-title !! Dropdowns
-                .container-fluid
-                    .row
-                        .col
-                            .dropdown
-                                button.btn.btn-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Кнопка Dropdown
-                                ul.dropdown-menu
-                                    li
-                                        a.dropdown-item(href="#") Action
-                                    li
-                                        a.dropdown-item(href="#") Another action
-                                    li
-                                        a.dropdown-item(href="#") Something else here
-                        .col
-                            .dropdown
-                                a.btn.btn-secondary.btn-lg.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Ссылка Dropdown
-                                ul.dropdown-menu
-                                    li
-                                        a.dropdown-item(href="#") Первый пункт
-                                    li
-                                        a.dropdown-item(href="#") Второй пункт
-                                    li
-                                        a.dropdown-item(href="#") Третий пункт
+
                 p Здесь ещё можно поразбираться с размерами кнопок - как можно добавить кастомные размеры.
             .example-list-group
                 h3.bs-components-title List group
@@ -106,24 +75,7 @@ html(lang="ru")
                     li.list-group-item Пятый пункт
                     li.list-group-item.list-group-item-success Шестой пункт
                     li.list-group-item Седьмой пункт
-            .example-modal
-                h3.bs-components-title !! Modal
-                p  Статическое окно
-                // Кнопка, которая запускает модальное окно:
-                button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") Запустить демо модального окна
-                // Само модальное окно
-                .modal.fade(id="exampleModal" tabindex="-1" aria-labeledby="exampleModalLabel" aria-hidden="true")
-                    .modal-dialog
-                        .modal-content
-                            .modal-header
-                                h5.modal-title(id="exampleModalLabel") Заголовок модального окна
-                                button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Закрыть")
-                            .modal-body
-                                p Здесь у нас может быть любой текст.
-                                p И ещё какой-нибудь текст
-                            .modal-footer
-                                button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Закрыть
-                                button.btn.btn-primary(type="button") Сохранить изменения
+ 
                 
             .example-navs
                 h3.bs-components-title Navs & tabs 
@@ -246,6 +198,9 @@ html(lang="ru")
                                         span.placeholder.col-6
                                         span.placeholder.col-8
                                     a.btn.btn-primary.disabled.placeholder.col-6(href="#" tabindex="-1")
+            
+
+
 
             .exmaple-smth
                 h3.bs-components-title Something else

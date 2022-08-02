@@ -1,0 +1,85 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(href="styles/normalize.css" rel="stylesheet")
+        link(href="styles/main.css" rel="stylesheet")
+        title bs-components without js
+    body
+        p just text
+        .wrapper
+            .example-collapse
+                h3.bs-components-title !! Collapse
+                p Необходим импорт _transitions.scss и collapse.js
+                p
+                    a.btn.btn-primary(data-bs-toggle="collapse" href="#collapseExample" role="button" aria-control="collapseExample") Link with href
+                    button.btn.btn-primary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample") Button with data-bs-target
+                .collapse(id="collapseExample")
+                    .card.card-body Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            .example-dropdowns
+                h3.bs-components-title !! Dropdowns
+                .container-fluid
+                    .row
+                        .col
+                            .dropdown
+                                button.btn.btn-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Кнопка Dropdown
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(href="#") Action
+                                    li
+                                        a.dropdown-item(href="#") Another action
+                                    li
+                                        a.dropdown-item(href="#") Something else here
+                        .col
+                            .dropdown
+                                a.btn.btn-secondary.btn-lg.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Ссылка Dropdown
+                                ul.dropdown-menu
+                                    li
+                                        a.dropdown-item(href="#") Первый пункт
+                                    li
+                                        a.dropdown-item(href="#") Второй пункт
+                                    li
+                                        a.dropdown-item(href="#") Третий пункт
+            .example-modal
+                h3.bs-components-title !! Modal
+                p  Статическое окно
+                // Кнопка, которая запускает модальное окно:
+                button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") Запустить демо модального окна
+                // Само модальное окно
+                .modal.fade(id="exampleModal" tabindex="-1" aria-labeledby="exampleModalLabel" aria-hidden="true")
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h5.modal-title(id="exampleModalLabel") Заголовок модального окна
+                                button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Закрыть")
+                            .modal-body
+                                p Здесь у нас может быть любой текст.
+                                p И ещё какой-нибудь текст
+                            .modal-footer
+                                button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Закрыть
+                                button.btn.btn-primary(type="button") Сохранить изменения
+            .example-offcanvas
+                h3.bs-components-title Offcanvas
+                // Кнопки, которые вызывают Offcanvas
+                a.btn.btn-primary(href="#offcanvasExample" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasExample") Link with href
+                button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample") Button with data-bs-target
+                // Сам Offcanvas
+                .offcanvas.offcanvas-start(tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel")
+                    .offcanvas-header
+                        h5.offcanvas-title(id="offcanvasExampleLabel") Offcanvas
+                        button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+                    .offcanvas-body
+                        div Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                        .dropdown.mt-3
+                            button.btn.btn-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown") Dropdown button
+                            ul.dropdown-menu
+                                li
+                                    a.dropdown-item(href="#") Action
+                                li
+                                    a.dropdown-item(href="#") Another action
+                                li
+                                    a.dropdown-item(href="#") Something else here
+        
+
+        script(src="scripts/bs-components-entry.js" type="text/javascript")
