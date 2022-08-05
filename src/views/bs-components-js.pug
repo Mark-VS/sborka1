@@ -5,7 +5,7 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         link(href="styles/normalize.css" rel="stylesheet")
         link(href="styles/main.css" rel="stylesheet")
-        title bs-components without js
+        title bs-components with js
     body
         p just text
         .wrapper
@@ -80,6 +80,11 @@ html(lang="ru")
                                     a.dropdown-item(href="#") Another action
                                 li
                                     a.dropdown-item(href="#") Something else here
+            
+            .example-popovers
+                h3.bs-components-title Popovers
+
+                <button type="button" class="btn btn-lg btn-danger" data-bs-placement="top" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
         
 
         script(src="scripts/bs-components-entry.js" type="text/javascript")
