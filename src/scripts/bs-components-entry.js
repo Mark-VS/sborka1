@@ -5,6 +5,7 @@ import Dropdown from "./../../node_modules/bootstrap/js/dist/dropdown";
 import Modal from "./../../node_modules/bootstrap/js/dist/modal";
 import Offcanvas from "./../../node_modules/bootstrap/js/dist/offcanvas";
 import Popover from "./../../node_modules/bootstrap/js/dist/popover";
+import Scrollspy from "./../../node_modules/bootstrap/js/dist/scrollspy";
 
 
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
