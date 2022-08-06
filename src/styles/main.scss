@@ -67,11 +67,12 @@ $enable-shadows: true;
 
 body {
     font-size: 16px;
-    position: relative; /* required by scrollspy */
+    //position: relative; /* required by scrollspy */
 }
+
 .list-group {
-    position: sticky;
-    top: 15px;
+    //position: sticky;
+    //top: 15px;
 }
 
 .wrapper {
