@@ -8,5 +8,5 @@ import Popover from "./../../node_modules/bootstrap/js/dist/popover";
 import Scrollspy from "./../../node_modules/bootstrap/js/dist/scrollspy";
 
 
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+//const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+//const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))

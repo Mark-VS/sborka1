@@ -65,10 +65,7 @@ $enable-shadows: true;
 @import "bp-bootstrap";         // изучаем медиа-запросы и breakpoint'ы с bootstrap'ом
 
 
-body {
-    font-size: 16px;
-    //position: relative; /* required by scrollspy */
-}
+
 
 .list-group {
     //position: sticky;
@@ -102,3 +99,10 @@ body {
     text-decoration: underline
 }
 
+body {
+    position: relative; 
+}
+.fh5co-home {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+.fh5co-services {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+.fh5co-explore {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+.fh5co-project {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
