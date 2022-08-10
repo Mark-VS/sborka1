@@ -10,7 +10,7 @@ $enable-shadows: true;
 
 // Required Bootstrap imports
 @import "./../../node_modules/bootstrap/scss/variables";
-//@import "./../../node_modules/bootstrap/scss/maps";
+@import "./../../node_modules/bootstrap/scss/maps";
 @import "./../../node_modules/bootstrap/scss/mixins";
 @import "./../../node_modules/bootstrap/scss/root";
 
@@ -66,12 +66,6 @@ $enable-shadows: true;
 
 
 
-
-.list-group {
-    //position: sticky;
-    //top: 15px;
-}
-
 .wrapper {
     width: 84%;
     margin: 0 auto;
@@ -91,18 +85,10 @@ $enable-shadows: true;
 }
 
 
-.row div {
-    border: solid 1px green
-}
-
 .bs-components-title {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 body {
     position: relative; 
 }
-.fh5co-home {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-.fh5co-services {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-.fh5co-explore {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-.fh5co-project {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
