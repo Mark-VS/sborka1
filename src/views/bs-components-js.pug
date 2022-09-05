@@ -9,6 +9,62 @@ html(lang="ru")
     body
         p(id="just_text") just text
         .wrapper
+            .example-accordion
+                h3.bs-components-title Accordion
+                p Для работы Accordion'а необходимы: _transitions.scss, _accordion.scss и collapse.js.
+                .accordion(id="accordionExample")
+                    .accordion-item
+                        h2.accordion-header(id="headingOne")
+                            button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                               | Accordion Item #1
+                        .accordion-collapse.collapse.show(id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample")
+                            .accordion-body
+                                strong This is the first item's accordion body.
+                                |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+                                code .accordion-body
+                                | , though the transition does limit overflow.
+                    .accordion-item
+                        h2.accordion-header(id="headingTwo")
+                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                | Accordion Item #2
+                        .accordion-collapse.collapse(id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample")
+                            .accordion-body
+                                strong This is the second item's accordion body.
+                                |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+                                code .accordion-body
+                                | , though the transition does limit overflow.
+                    .accordion-item
+                        h2.accordion-header(id="headingThree")
+                            button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                | Accordion Item #3
+                        .accordion-collapse.collapse(id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample")
+                            .accordion-body
+                                strong This is the third item's accordion body.
+                                |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+                                code .accordion-body
+                                | , though the transition does limit overflow.
+            .example-alert
+                h3.bs-components-title Alert
+                .alert.alert-primary(role="alert") Пример компонента alert-primary
+                .alert.alert-secondary(role="alert") Пример компонента alert-secondary
+                div(id="liveAlertPlaceholder")
+                button.btn.btn-primary(type="button" id="liveAlertBtn") Show live alert
+            .example-carousel
+                h3.bs-components-title Carousel
+                .carousel.slide(id="carouselExampleControls" data-bs-ride="carousel" style="width: 500px; height: 500px")
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block.w-100(src="img/ice.jpg" alt="...")
+                        .carousel-item
+                            img.d-block.w-100(src="img/nine.jpg" alt="...")
+                        .carousel-item
+                            img.d-block.w-100(src="img/mask.jpg" alt="...")
+                    button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Previous
+                    button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Next
             .example-collapse
                 h3.bs-components-title !! Collapse
                 p Необходим импорт _transitions.scss и collapse.js
@@ -80,6 +136,13 @@ html(lang="ru")
                                     a.dropdown-item(href="#") Another action
                                 li
                                     a.dropdown-item(href="#") Something else here
+            .example-popover
+                h3.bs-components-title Popover
+                p Popover тра-та-та
+                button.btn.btn-lg.btn-danger(type="button" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right? Или не Right?") Нажми, чтобы включить Popover
+                p Наполнение пространства
+                p Ещё одно наполнение пространства
+                p И наконец последнее наполнение в этом блоке.
             .example-ppp
                 h3.bs-components-title alala 
                 <div class="row">
@@ -144,26 +207,22 @@ html(lang="ru")
                             |   Hello, world! This is a toast message.
                 h4 Что осталось непонятным
                 p Тот Toast, который мы запустили кнопкой, закрывается плавно, когда мы нажимаем кнопку "Закрыть". А первый пропадает мгновенно.
-
-
-
-
-
-
+            .example-tooltip
+                h3.bs-components-title Tooltip
+                p Tooltip появляется при наведении курсора на ссылки в нижеследующем тексте:
+                p.muted
+                    | Placeholder text to demonstrate some 
+                    a(href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip") inline links
+                    |  with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of 
+                    a(href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip") real text
+                    | . And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how 
+                    a(href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too") these tooltips on links
+                    |  can work in practice, once you use them on 
+                    a(href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!") your own
+                    |  site or project.
+        script(src="scripts/bs-components-entry.js" type="text/javascript")
+        //script(src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous")
+        //script(src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="text/javascript")
         
-
-        //script(src="scripts/bs-components-entry.js" type="text/javascript")
-        script(src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous")
-        script(src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.js" type="text/javascript")
-        <script>
-            | // Проверяем, подключен ли jQuery
-            | $("#just_text").css("color", "red");
-            | // Делаем Toast видимым
-            | $(document).ready(function() {
-            |       $("#liveToastBtn").click(function() {
-            |           $("#liveToast").toast("show");
-            |       })
-            | });
-        </script>
         
         
