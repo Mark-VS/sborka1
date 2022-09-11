@@ -2,7 +2,9 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 
 function views(cb) {
-    return gulp.src("./src/views/*.pug")
+    // Конвертируем все pug-файлы во всех вложенных папках, кроме папки layouts,
+    // потому что там хранятся не полноценные странички, а layout'ы.
+    return gulp.src(["./src/views/**/*.pug", "!./src/views/layouts/**/*.pug"])
         .pipe(pug({
             pretty: true
         }))

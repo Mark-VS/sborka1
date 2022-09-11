@@ -1,0 +1,70 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(nave="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no")
+        // link(href="./../styles/normalize.css" rel="stylesheet")
+        link(href="./styles/main.css" rel="stylesheet")
+        title Страничка компонента Navbar
+    body
+        p.gorik Тра-та-та. Проверяем, подключен ли main.css. Если подключён, то текст зелёный
+        p.dorik Проверяем jqery.
+        .container
+            p Ещё одно тра-та-та
+            p.h2 Navbar
+            p.lead Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+            p.h3 How it works
+            p Here’s what you need to know before getting started with the navbar:
+            ul
+                li Navbars require a wrapping #[span.lightValue .navbar] with #[span.lightValue .navbar-expand{-sm|-md|-lg|-xl|-xxl}] for responsive collapsing and #[a(href="https://getbootstrap.com/docs/5.2/components/navbar/#color-schemes") color scheme] classes.
+                li Navbars and their contents are fluid by default. Change the container to limit their horizontal width in different ways.
+                li Use our spacing and flex utility classes for controlling spacing and alignment within navbars.
+                li Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
+                li Ensure accessibility by using a element or, if using a more generic element such as a, add a role="navigation" to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
+                li Indicate the current item by using aria-current="page" for the current page or aria-current="true" for the current item in a set.
+                li New in v5.2.0: Navbars can be themed with CSS variables that are scoped to the #[span.lightValue .navbar] base class. #[span.lightValue .navbar-light] has been deprecated and #[span.lightValue .navbar-dark] has been rewritten to override CSS variables instead of adding additional styles.
+            p The animation effect of this component is dependent on the #[span.lightValue prefers-reduced-motion] media query. See the 
+                a(href="https://getbootstrap.com/docs/5.2/getting-started/accessibility/#reduced-motion") reduced motion section of our accessibility documentation
+                | .
+            h3 Supported content
+            p Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+            ul
+                li #[span.lightValue .navbar-brand] for your company, product, or project name.
+                li #[span.lightValue .navbar-nav] for a full-height and lightweight navigation (including support for dropdowns).
+                li #[span.lightValue .navbar-toggler] for use with our collapse plugin and other #[a(href="https://getbootstrap.com/docs/5.2/components/navbar/#responsive-behaviors") navigation toggling] behaviours.
+                li Flex and spacing utilities for any form controls and actions.
+                li #[span.lightValue .navbar-text] for adding vertically centered strings of text.
+                li #[span.lightValue .collapse.navbar-collapse] for grouping and hiding navbar contents by a parent breakpoint.
+                li Add an optional #[span.lightValue .navbar-scroll] to set a #[span.lightValue max-height] and #[a(href="https://getbootstrap.com/docs/5.2/components/navbar/#scrolling") scroll expanded navbar content].
+            p Here’s an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the #[span.lightValue lg] (large) breakpoint.
+            p Чтобы этот пример отображался нормально,  необходимо подключить: _dropdown.scss, _nav.scss, _navbar.scss, _transitions.scss, collapse.js, dropdown.js
+            .border.border-info.p-4
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                    .container-fluid
+                        a.navbar-brand(href="#") Navbar
+                        button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                            span.navbar-toggler-icon
+                        .collapse.navbar-collapse(id="navbarSupportedContent")
+                            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                                li.nav-item
+                                    a.nav-link.active(aria-current="page" href="#") Home
+                                li.nav-item
+                                    a.nav-link(href="#") Link
+                                li.nav-item.dropdown
+                                    a.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Dropdown
+                                    ul.dropdown-menu
+                                        li
+                                            a.dropdown-item(href="#") Action
+                                        li
+                                            a.dropdown-item(href="#") Another action
+                                        li
+                                            hr.dropdown-divider
+                                        li
+                                            a.dropdown-item(href="#") Something else here
+                                li.nav-item
+                                    a.nav-link.disabled Disabled
+                            form.d-flex(role="search")
+                                input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-outline-success(type="submit") Search
+        
+        script(src="scripts/shala.js" type="text/javascript")

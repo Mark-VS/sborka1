@@ -16,17 +16,35 @@ function norm() {
         .pipe(gulp.dest("./build/styles"));
 }
 // Собираем стили
+
+// Эта функция собирает стили из "src/styles"
 function compileStyles() {
     var plugins = [
         autoprefixer({overrideBrowserslist: ["last 1 version"]}),
         cssnano()
     ];
     norm();
-    return gulp.src(["./src/styles/main.scss"])
+    return gulp.src("./src/styles/main.scss")
         .pipe(srmaps.init())
             .pipe(sass().on("error", sass.logError))
             .pipe(postCss(plugins))
         .pipe(srmaps.write("./sourcemaps"))
         .pipe(gulp.dest("./build/styles"));
 }
+
+// Эта функция собирает стили из "src/styles/bootstrap-navbar"
+function compileStylesNavbar() {
+    var plugins = [
+        autoprefixer({overrideBrowserslist: ["last 1 version"]}),
+        cssnano()
+    ];
+    norm();
+    return gulp.src("./src/styles/bootstrap-navbar/main.scss")
+        //.pipe(srmaps.init())
+            .pipe(sass().on("error", sass.logError))
+            .pipe(postCss(plugins))
+        //.pipe(srmaps.write("./sourcemaps"))
+        .pipe(gulp.dest("./build/bootstrap/styles"));
+}
 module.exports = compileStyles;
+//module.exports = compileStylesNavbar;

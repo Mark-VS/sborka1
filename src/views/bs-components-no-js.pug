@@ -118,6 +118,10 @@ html(lang="ru")
                         a.nav-link.disabled Disabled
             .example-navbar
                 h3.bs-components-title Navbar
+                p.
+                    Вообще Navbar - это не js-компонент.
+                    Но в этом примере использован Dropdown, поэтому нам непобходимо подключить dropdown.js, а также jquery и popper.js, необходимые для его работы.
+                    Когда мы уменьшаем окно, меню схлопывается в разворачивающийся значок, который тоже является Dropdown'ом.
                 p Если скопировать этот первый пример с оф. сайта Bootstrap'а, то иконка навбара не будет отображаться, когда мы уменьшим окно. Это из-за того, что у тэга NAV пропущен класс .navbar-light
 
                 nav.navbar.navbar-expand-lg.navbar-light.bg-light

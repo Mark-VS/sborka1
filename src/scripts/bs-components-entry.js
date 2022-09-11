@@ -17,11 +17,14 @@ import Toast from "./../../node_modules/bootstrap/js/dist/toast";
 import Tooltip from "./../../node_modules/bootstrap/js/dist/tooltip";
 import Carousel from "./../../node_modules/bootstrap/js/dist/carousel";
 
+
 // Проверяем, подключен ли jQuery
 $("#just_text").css("color", "red");
 
 // Добавляем новый Alert
-
+// ОЧЕНЬ ВАЖНО! Здесь мы переопределяем глобальную функцию alert(),
+// поэтому НЕЛЬЗЯ использовать дефолтный alert() в этом документе.
+// А то я часто его использую, чтобы тестить работоспособность кода.
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
 const alert = (message, type) => {
